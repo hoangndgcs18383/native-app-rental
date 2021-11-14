@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Rental App</string>
+    <string name="notification_1">Đăng nhập thành công</string>
+    <string name="notification_2">Tạo thuê căn hộ thành công . Trở về màng hình chính bằng cách bấm nút Back</string>
+    <string name="tv_username"><b>Tên Người Dùng</b></string>
+    <string name="tv_password"><b>Mật Khẩu</b></string>
+
+    <string name="create">Tạo</string>
+    <string name="confirm">Xác Nhận</string>
+
+    <string name="tv_ADD">Tạo mới căn hộ</string>
+    <string name="tv_vi">Tiếng Việt</string>
+    <string name="tv_en">Tiếng Anh</string>
+    <string name="tv_loginBtn">Đăng nhập</string>
+    <string name="tv_nextBtn">Tiếp tục</string>
+    <string name="tv_back">Trở về</string>
+
+    <string name="tv_nameReporter"><b>Tên chủ hộ :</b></string>
+    <string name="tv_nameRental"><b>Tên căn hộ :</b></string>
+    <string name="tv_address"><b>Địa chỉ :</b></string>
+    <string name="tv_type"><b>Loại :</b></string>
+    <string name="tv_furniture"><b>Nội thất :</b></string>
+    <string name="tv_bedroom"><b>No. Phòng ngủ :</b></string>
+    <string name="tv_price"><b>Phí :</b></string>
+    <string name="tv_note"><b>Ghi chú :</b></string>
+
+    <string name="hint_nameReporter">Nhập tên chủ hộ</string>
+    <string name="hint_nameRental">Nhập tên căn hộ</string>
+    <string name="hint_address">Nhập địa chỉ</string>
+    <string name="hint_type">Chọn loại</string>
+    <string name="hint_furniture">Chọn nội thất</string>
+    <string name="hint_bedroom">Nhập số lượng phòng ngủ</string>
+    <string name="hint_price">Nhập phí</string>
+    <string name="hint_priceRef"> $ mỗi tháng</string>
+    <string name="hint_note">Nhập ghi chú</string>
+
+
+    <string name="tv_select_city"><b>Select city</b></string>
+    <string name="tv_select_district"><b>Select district</b></string>
+    <string name="tv_select_ward"><b>Select ward</b></string>
+    <string name="tv_select_type"><b>Chọn Loại</b></string>
+    <string name="tv_select_furniture"><b>Chọn nội thất</b></string>
+
+
+    <string-array name="types">
+        <item>Flat</item>
+        <item>House</item>
+        <item>Pen House</item>
+        <item>Bungalow</item>
+    </string-array>
+
+    <string-array name="furniture">
+        <item>Furnished</item>
+        <item>Unfurnished</item>
+        <item>Part-furnished</item>
+    </string-array>
+</resources>

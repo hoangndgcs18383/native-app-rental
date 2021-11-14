@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test4">
         <activity
-            android:name=".Form_3Activity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".Form_2Activity"
+            android:name=".SuccesfulActivity"
             android:exported="false" />
         <activity
-            android:name=".FormTestActivity"
+            android:name=".ConfirmActivity"
             android:exported="false" />
         <activity
             android:name=".FormActivity"

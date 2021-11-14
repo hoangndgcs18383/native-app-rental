@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class FormTestActivity extends AppCompatActivity {
+public class ConfirmActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form_test);
+        setContentView(R.layout.activity_confirm);
 
         TextView tvInfoRentalName = findViewById(R.id.tvInfoRentalName);
         TextView tvInfoNameReporter = findViewById(R.id.tvInfoNameReporter);
@@ -19,12 +22,12 @@ public class FormTestActivity extends AppCompatActivity {
         TextView tvInfoType = findViewById(R.id.tvInfoType);
         TextView tvInfoFurniture = findViewById(R.id.tvInfoFurniture);
         TextView tvInfoNumBed = findViewById(R.id.tvInfoNumBed);
-        TextView tvInfoNumKit = findViewById(R.id.tvInfoNumKit);
-        TextView tvInfoNumBath = findViewById(R.id.tvInfoNumBath);
+        TextView tvInfoPrice = findViewById(R.id.tvInfoPrice);
+        TextView tvInfoNote = findViewById(R.id.tvInfoNote);
 
 
         String rentalName = "", nameReporter = "", address = "";
-        String type = "", furniture = "", numBed ="", numKit ="", numBath="";
+        String type = "", furniture = "", numBed ="", price = "", note = "";
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -36,8 +39,8 @@ public class FormTestActivity extends AppCompatActivity {
             type = bundle.getString("type");
             furniture = bundle.getString("furniture");
             numBed = bundle.getString("numBed");
-            numKit = bundle.getString("numKit");
-            numBath = bundle.getString("numBath");
+            price = bundle.getString("price");
+            note = bundle.getString("note");
         }
 
         tvInfoRentalName.setText(rentalName);
@@ -46,6 +49,28 @@ public class FormTestActivity extends AppCompatActivity {
         tvInfoType.setText(type);
         tvInfoFurniture.setText(furniture);
         tvInfoNumBed.setText(numBed);
-        tvInfoNumKit.setText(numKit);
-        tvInfoNumBath.setText(numBath);
-}}
+        tvInfoPrice.setText(price);
+        tvInfoNote.setText(note);
+
+        Button btnConfirm = findViewById(R.id.btnConfirmDetail);
+        btnConfirm.setOnClickListener(_btnConfirmClick);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+    }
+
+    private View.OnClickListener _btnConfirmClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent putText = new Intent(v.getContext(), SuccesfulActivity.class);
+            startActivity(putText);
+            finish();
+        }
+    };
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
+    }
+}

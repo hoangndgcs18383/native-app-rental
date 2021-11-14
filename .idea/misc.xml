@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.290625" />
+        <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_confirm.xml" value="0.21822916666666667" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_create_form.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_create_rental.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_create_rental2.xml" value="0.264" />
@@ -10,10 +12,13 @@
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_form3.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_form_test.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_form_test_actitvity.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_home.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_login.xml" value="0.1296875" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_main.xml" value="0.4" />
-        <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_pass_tv_login.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_main2.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_pass_tv_login.xml" value="0.19764150943396228" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_rental_create_form.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_succesful.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/activity_test.xml" value="0.4" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/list_item_property_furniture.xml" value="0.14375" />
         <entry key="..\:/Users/ASUS/StudioProjects/test4/app/src/main/res/layout/list_item_property_type.xml" value="0.14375" />

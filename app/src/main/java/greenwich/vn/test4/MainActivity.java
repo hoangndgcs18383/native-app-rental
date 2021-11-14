@@ -17,11 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        String notification_1 = getResources().getString(R.string.notification_1);
         String btnLoginName = getResources().getString(R.string.tv_loginBtn);
-
-//        Toast.makeText(this, notification_1, Toast.LENGTH_LONG).show();
 
         Button btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setText(btnLoginName);
@@ -42,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
             String username = tvUsername.getText().toString();
             String pw = tvPw.getText().toString();
             String notification_1 = getResources().getString(R.string.notification_1);
-
             Toast.makeText(v.getContext(), notification_1, Toast.LENGTH_LONG).show();
 
             if(TextUtils.isEmpty(username)){
@@ -55,22 +50,12 @@ public class MainActivity extends AppCompatActivity {
             }
             if (isValid){
                 Toast.makeText(v.getContext(), "Your username: "+username + "\n" + "Your password: "+ pw, Toast.LENGTH_LONG).show();
-
                 Log.w("Main Activity", "This is a Warning Log");
                 Log.i("Main Activity", username + "-"+ pw);
                 Log.d("Main Activity", "This is a Debug Log");
                 Log.v("Main Activity", "This is a Verbose Log");
                 Log.e("Main Activity", "This is a Error Log");
-
-//                Bundle accountInfo = new Bundle();
-//                accountInfo.putString("username", username);
-//                accountInfo.putString("password", pw);
-
-                Intent testActivity = new Intent(v.getContext(), FormActivity.class);
-
-//                testActivity.putExtras(accountInfo);
-//                testActivity.putExtra("username", username);
-//                testActivity.putExtra("password", pw);
+                Intent testActivity = new Intent(v.getContext(), HomeActivity.class);
                 startActivity(testActivity);
                 finish();
 

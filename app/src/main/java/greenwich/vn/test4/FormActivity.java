@@ -6,59 +6,95 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class FormActivity extends AppCompatActivity {
 
+    String[] types = {"Flat", "House", "Pen House", "Bungalow"};
+    String[] furniture = {"Furnished", "Unfurnished", "Part-furnished"};
+//    getResources().getStringArray(R.array.types)
+
+    AutoCompleteTextView autoCompleteTypeTextView;
+    AutoCompleteTextView autoCompleteFurnitureTextView;
+
+    ArrayAdapter<String> adapterTypeItems;
+    ArrayAdapter<String> adapterFurnitureItems;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pass_tv_login);
-        String notification_1 = getResources().getString(R.string.notification_1);
-        Toast.makeText(this, notification_1, Toast.LENGTH_LONG).show();
+        setContentView(R.layout.activity_new_property);
+
+
+        autoCompleteTypeTextView = findViewById(R.id.selectType);
+        autoCompleteFurnitureTextView = findViewById(R.id.selectFurniture);
+        adapterTypeItems = new ArrayAdapter<String>(this, R.layout.list_item, types);
+        adapterFurnitureItems = new ArrayAdapter<String>(this, R.layout.list_item, furniture);
+        autoCompleteTypeTextView.setAdapter(adapterTypeItems);
+        autoCompleteFurnitureTextView.setAdapter(adapterFurnitureItems);
+        autoCompleteTypeTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String type = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(), "Type: "+type, Toast.LENGTH_SHORT).show();
+            }
+        });
+        autoCompleteFurnitureTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String furniture = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(), "Furniture: "+furniture, Toast.LENGTH_SHORT).show();
+            }
+        });
 
 //        String btnNextName = getResources().getString(R.string.tv_nextBtn);
         Button btnNextForm = findViewById(R.id.btnNextForm);
-        btnNextForm.setOnClickListener(btnNextClick);
+        btnNextForm.setOnClickListener(_btnNextClick);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
-    private View.OnClickListener btnNextClick = new View.OnClickListener() {
+    private View.OnClickListener _btnNextClick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             boolean isValid = true;
-
-
             TextView tvErrorRentalName = findViewById(R.id.tvErrorRentalNameTest);
             TextView tvErrorNameReported = findViewById(R.id.tvErrorNameReportTest);
             TextView tvErrorAddress = findViewById(R.id.tvErrorAddress);
-//            TextView tvErrorKit = findViewById(R.id.tvErrorNumKit);
-//            TextView tvErrorBath = findViewById(R.id.tvErrorNumBath);
-//            TextView tvErrorPrice = findViewById(R.id.tvErrorPrice);
+            TextView selectErrorType = findViewById(R.id.selectErrorType);
+            TextView selectErrorFurniture = findViewById(R.id.selectErrorFurniture);
+            TextView tvErrorBed = findViewById(R.id.tvErrorNumBed);
+            TextView tvErrorPrice = findViewById(R.id.tvErrorPrice);
 
             TextView tvRentalName = findViewById(R.id.tvRentalName);
             TextView tvNameReporter = findViewById(R.id.tvNameReporter);
             TextView tvAddress = findViewById(R.id.tvAddress);
-//            TextView tvNumKit = findViewById(R.id.tvNumKit);
-//            TextView tvNumBath = findViewById(R.id.tvNumBath);
-//            TextView tvPrice = findViewById(R.id.tvPrice);
-//            TextView tvNote = findViewById(R.id.tvNote);
+            TextView selectType = findViewById(R.id.selectType);
+            TextView selectFurniture = findViewById(R.id.selectFurniture);
+            TextView tvNumBed = findViewById(R.id.numBed);
+            TextView tvPrice = findViewById(R.id.tvPrice);
+            TextView tvNote = findViewById(R.id.tvNote);
 
             String rentalName = tvRentalName.getText().toString();
             String nameReporter = tvNameReporter.getText().toString();
             String address = tvAddress.getText().toString();
-//            String numKit = tvNumKit.getText().toString();
-//            String numBath = tvNumBath.getText().toString();
-//            String price = tvPrice.getText().toString();
-//            String numNote = tvNote.getText().toString();
+            String type = selectType.getText().toString();
+            String furniture = selectFurniture.getText().toString();
+            String numBed = tvNumBed.getText().toString();
+            String price = tvPrice.getText().toString();
+            String numNote = tvNote.getText().toString();
 
             String errorRentalName = "";
             String errorNameReporter = "";
             String errorAddress = "";
-            String errorNumKit = "";
-            String errorNumBath = "";
+            String errorSelectType = "";
+            String errorSelectFurniture = "";
+            String errorNumBed = "";
             String errorPrice = "";
             if(TextUtils.isEmpty(rentalName)){
                 isValid = false;
@@ -72,45 +108,52 @@ public class FormActivity extends AppCompatActivity {
                 isValid = false;
                 errorAddress += "* The field can't be empty. Please enter address!*";
             }
-//            if(TextUtils.isEmpty(numKit)){
-//                isValid = false;
-//                errorNumKit += "* The field can't be empty. Please select your number of kitten!";
-//            }
-//            if(TextUtils.isEmpty(numBath)){
-//                isValid = false;
-//                errorNumBath += "* The field can't be empty. Please select your number of bathroom!";
-//            }
-//            if(TextUtils.isEmpty(price)){
-//                isValid = false;
-//                errorPrice += "* The field can't be empty. Please select your number of price!";
-//            }
+                        if(TextUtils.isEmpty(type)){
+                isValid = false;
+                errorSelectType += "* The field must be select property type!*";
+            }
+            if(TextUtils.isEmpty(furniture)){
+                isValid = false;
+                errorSelectFurniture += "* The field must be select property furniture!*";
+            }
+            if(TextUtils.isEmpty(numBed)){
+                isValid = false;
+                errorNumBed += "* The field can't be empty. Please enter No.Bedroom!*";
+            }
+            if(TextUtils.isEmpty(price)){
+                isValid = false;
+                errorPrice += "* The field can't be empty. Please enter your price!*";
+            }
             if (isValid){
-//                Bundle rentalInfo = new Bundle();
-//                rentalInfo.putString("rentalName", rentalName);
-//                rentalInfo.putString("nameReporter", nameReporter);
-//                rentalInfo.putString("address", address);
-////                rentalInfo.putString("numKit", numKit);
-////                rentalInfo.putString("numBath", numBath);
-////                rentalInfo.putString("price", price);
-////                rentalInfo.putString("note", numNote);
-//
-//                Intent putText = new Intent(v.getContext(), FormTestActivity.class);
-                Intent test = new Intent(v.getContext(), Form_2Activity.class);
-
-//                putText.putExtras(rentalInfo);
-                startActivity(test);
-                finish();
+                Bundle rentalInfo = new Bundle();
+                rentalInfo.putString("rentalName", rentalName);
+                rentalInfo.putString("nameReporter", nameReporter);
+                rentalInfo.putString("address", address);
+                rentalInfo.putString("type", type);
+                rentalInfo.putString("furniture", furniture);
+                rentalInfo.putString("numBed", numBed);
+                rentalInfo.putString("price", price);
+                rentalInfo.putString("note", numNote);
+                Intent putText = new Intent(v.getContext(), ConfirmActivity.class);
+                putText.putExtras(rentalInfo);
+                startActivity(putText);
 
             }
             else{
                 tvErrorRentalName.setText(errorRentalName);
                 tvErrorNameReported.setText(errorNameReporter);
                 tvErrorAddress.setText(errorAddress);
-//                tvErrorKit.setError(errorNumKit);
-//                tvErrorBath.setError(errorNumBath);
-//                tvErrorPrice.setError(errorPrice);
+                selectErrorType.setText(errorSelectType);
+                selectErrorFurniture.setText(errorSelectFurniture);
+                tvErrorBed.setText(errorNumBed);
+                tvErrorPrice.setText(errorPrice);
             }
         }
     };
 
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
+    }
 }

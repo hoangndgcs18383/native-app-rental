@@ -4,17 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FormTestActivity">
+    tools:context=".ConfirmActivity">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#00CDDC39"
+        android:minHeight="48dp"
+        android:text="@string/confirm"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
         android:text="@string/tv_nameRental"
         app:layout_constraintBottom_toBottomOf="@+id/tvInfoRentalName"
-        app:layout_constraintEnd_toStartOf="@+id/tvInfoRentalName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvInfoRentalName" />
 
@@ -23,10 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
         android:text="@string/tv_nameReporter"
         app:layout_constraintBottom_toBottomOf="@+id/tvInfoNameReporter"
-        app:layout_constraintEnd_toStartOf="@+id/tvInfoNameReporter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvInfoNameReporter" />
 
@@ -34,20 +45,20 @@
         android:id="@+id/tvInfoRentalName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
         android:text="@string/tv_nameRental"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
         android:id="@+id/tvInfoNameReporter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
         android:text="@string/tv_nameReporter"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/tvInfoRentalName" />
 
     <TextView
@@ -55,10 +66,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
         android:text="@string/tv_address"
         app:layout_constraintBottom_toBottomOf="@+id/tvInfoAddress"
-        app:layout_constraintEnd_toStartOf="@+id/tvInfoAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvInfoAddress" />
 
@@ -66,10 +75,10 @@
         android:id="@+id/tvInfoAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
         android:text="@string/tv_address"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/tvInfoNameReporter" />
 
     <TextView
@@ -77,10 +86,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
         android:text="@string/tv_type"
         app:layout_constraintBottom_toBottomOf="@+id/tvInfoType"
-        app:layout_constraintEnd_toStartOf="@+id/tvInfoType"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvInfoType" />
 
@@ -88,10 +95,10 @@
         android:id="@+id/tvInfoType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
         android:text="@string/tv_type"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/tvInfoAddress" />
 
     <TextView
@@ -99,10 +106,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
         android:text="@string/tv_furniture"
         app:layout_constraintBottom_toBottomOf="@+id/tvInfoFurniture"
-        app:layout_constraintEnd_toStartOf="@+id/tvInfoFurniture"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvInfoFurniture" />
 
@@ -110,10 +115,10 @@
         android:id="@+id/tvInfoFurniture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
         android:text="@string/tv_furniture"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/tvInfoType" />
 
     <TextView
@@ -121,10 +126,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
         android:text="@string/tv_bedroom"
         app:layout_constraintBottom_toBottomOf="@+id/tvInfoNumBed"
-        app:layout_constraintEnd_toStartOf="@+id/tvInfoNumBed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvInfoNumBed" />
 
@@ -132,54 +135,70 @@
         android:id="@+id/tvInfoNumBed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
         android:text="@string/tv_bedroom"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/tvInfoFurniture" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:text="@string/tv_kitten"
-        app:layout_constraintBottom_toBottomOf="@+id/tvInfoNumKit"
-        app:layout_constraintEnd_toStartOf="@+id/tvInfoNumKit"
+        android:text="@string/tv_price"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInfoPrice"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvInfoNumKit" />
+        app:layout_constraintTop_toTopOf="@+id/tvInfoPrice" />
 
     <TextView
-        android:id="@+id/tvInfoNumKit"
+        android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="100dp"
-        android:text="@string/tv_kitten"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="50dp"
+        android:text="@string/tv_note"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInfoNote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvInfoNote" />
+
+    <TextView
+        android:id="@+id/tvInfoPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/tv_price"
+        app:layout_constraintStart_toEndOf="@+id/tv"
         app:layout_constraintTop_toBottomOf="@+id/tvInfoNumBed" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/tvInfoNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:text="@string/tv_bathroom"
-        app:layout_constraintBottom_toBottomOf="@+id/tvInfoNumBath"
-        app:layout_constraintEnd_toStartOf="@+id/tvInfoNumBath"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvInfoNumBath" />
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:hint="null"
+        android:text="null"
+        app:layout_constraintStart_toEndOf="@+id/tv2"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoPrice" />
 
     <TextView
-        android:id="@+id/tvInfoNumBath"
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_priceRef"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInfoPrice"
+        app:layout_constraintStart_toEndOf="@+id/tvInfoPrice"
+        app:layout_constraintTop_toTopOf="@+id/tvInfoPrice" />
+
+    <Button
+        android:id="@+id/btnConfirmDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="100dp"
-        android:text="@string/tv_bathroom"
+        android:text="@string/confirm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoNumKit" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoNote" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
