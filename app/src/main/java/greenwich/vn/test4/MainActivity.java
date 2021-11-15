@@ -18,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         String btnLoginName = getResources().getString(R.string.tv_loginBtn);
-
         Button btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setText(btnLoginName);
         btnLogin.setOnClickListener(btnLoginClick);
+
+
     }
+
     private View.OnClickListener btnLoginClick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -66,5 +68,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
+
     };
 }

@@ -125,19 +125,18 @@ public class FormActivity extends AppCompatActivity {
                 errorPrice += "* The field can't be empty. Please enter your price!*";
             }
             if (isValid){
-                Bundle rentalInfo = new Bundle();
-                rentalInfo.putString("rentalName", rentalName);
-                rentalInfo.putString("nameReporter", nameReporter);
-                rentalInfo.putString("address", address);
-                rentalInfo.putString("type", type);
-                rentalInfo.putString("furniture", furniture);
-                rentalInfo.putString("numBed", numBed);
-                rentalInfo.putString("price", price);
-                rentalInfo.putString("note", numNote);
+                Bundle bundle = new Bundle();
+                bundle.putString("rentalName", rentalName);
+                bundle.putString("nameReporter", nameReporter);
+                bundle.putString("address", address);
+                bundle.putString("type", type);
+                bundle.putString("furniture", furniture);
+                bundle.putString("numBed", numBed);
+                bundle.putString("price", price);
+                bundle.putString("note", numNote);
                 Intent putText = new Intent(v.getContext(), ConfirmActivity.class);
-                putText.putExtras(rentalInfo);
+                putText.putExtras(bundle);
                 startActivity(putText);
-
             }
             else{
                 tvErrorRentalName.setText(errorRentalName);

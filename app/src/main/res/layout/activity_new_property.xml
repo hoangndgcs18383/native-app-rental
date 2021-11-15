@@ -232,14 +232,15 @@
         app:layout_constraintTop_toBottomOf="@+id/tvErrorPrice"
         tools:ignore="SpeakableTextPresentCheck" />
 
+
     <TextView
         android:id="@+id/tvErrorPrice"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/selectErrorFurniture"
         app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
-
 
     <TextView
         android:id="@+id/selectErrorType"
@@ -265,8 +266,10 @@
         android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="@string/hint_price"
-        android:inputType="numberPassword"
+        android:inputType="number"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectErrorFurniture" />
+        app:layout_constraintTop_toBottomOf="@+id/selectErrorFurniture"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
