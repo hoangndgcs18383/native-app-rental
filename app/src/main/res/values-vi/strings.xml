@@ -23,6 +23,7 @@
     <string name="tv_bedroom"><b>No. Phòng ngủ :</b></string>
     <string name="tv_price"><b>Phí :</b></string>
     <string name="tv_note"><b>Ghi chú :</b></string>
+    <string name="tv_time"><b>Thời gian :</b></string>
 
     <string name="hint_nameReporter">Nhập tên chủ hộ</string>
     <string name="hint_nameRental">Nhập tên căn hộ</string>

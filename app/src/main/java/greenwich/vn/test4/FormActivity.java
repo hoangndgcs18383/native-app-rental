@@ -63,6 +63,7 @@ public class FormActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean isValid = true;
+
             TextView tvErrorRentalName = findViewById(R.id.tvErrorRentalNameTest);
             TextView tvErrorNameReported = findViewById(R.id.tvErrorNameReportTest);
             TextView tvErrorAddress = findViewById(R.id.tvErrorAddress);
@@ -154,5 +155,8 @@ public class FormActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp(){
         finish();
         return true;
+    }
+    public TextView textView(String text){
+        return findViewById(R.id.text);
     }
 }

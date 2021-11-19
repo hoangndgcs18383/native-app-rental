@@ -23,6 +23,7 @@
     <string name="tv_bedroom"><b>No. Bedroom :</b></string>
     <string name="tv_price"><b>Price :</b></string>
     <string name="tv_note"><b>Note :</b></string>
+    <string name="tv_time"><b>Time Created :</b></string>
 
     <string name="hint_nameReporter">Enter name reporter</string>
     <string name="hint_nameRental">Enter rental name</string>
